@@ -2,6 +2,7 @@ from math import radians, sin, cos, sqrt, atan2
 
 import gpxpy
 import gpxpy.gpx
+import polyline
 
 
 def calculate_distance(lat_1, lon_1, lat_2, lon_2) -> float:
@@ -71,12 +72,12 @@ def parse_gpx(file):
     if duration > 0:
         avg_speed = distance_km / (duration / 3600)
 
-    polyline = ";".join([f"{lat},{lon}" for lat, lon in points])
+    encoded_polyline = polyline.encode(points, precision=5)
 
     return {
         "distance_km": round(distance_km, 2),
         "duration_seconds": int(duration),
         "avg_speed": round(avg_speed, 2),
         "elevation_gain": round(elevation_gain, 2),
-        "polyline": polyline,
+        "polyline": encoded_polyline,
     }
