@@ -5,7 +5,7 @@ from rest_framework.response import Response
 
 from .models import Activity
 from .serializers import ActivitySerializer
-from .services import parse_gpx
+from .services.gpx_parser import parse_gpx
 
 
 class ActivityViewSet(viewsets.ModelViewSet):
