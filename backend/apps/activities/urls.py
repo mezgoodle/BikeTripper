@@ -4,6 +4,6 @@ from rest_framework.routers import DefaultRouter
 from .views import ActivityViewSet, ActivityStatsView
 
 router = DefaultRouter()
-router.register("activities", ActivityViewSet)
+router.register("activities", ActivityViewSet, basename="activities")
 
-urlpatterns = router.urls + path("stats/", ActivityStatsView.as_view())
+urlpatterns = router.urls + [path("stats/", ActivityStatsView.as_view())]
