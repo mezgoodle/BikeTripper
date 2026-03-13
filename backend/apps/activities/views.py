@@ -2,9 +2,11 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .models import Activity
-from .serializers import ActivitySerializer
+from .selectors import get_user_activity_stats
+from .serializers import ActivitySerializer, ActivityStatsSerializer
 from .services.gpx_parser import parse_gpx
 
 
@@ -17,6 +19,17 @@ class ActivityViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class ActivityStatsView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        stats = get_user_activity_stats(request.user)
+
+        serializer = ActivityStatsSerializer(stats)
+
+        return Response(serializer.data)
 
 
 @action(detail=True, methods=["post"])

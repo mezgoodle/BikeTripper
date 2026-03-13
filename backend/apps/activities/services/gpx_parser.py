@@ -19,13 +19,12 @@ def parse_gpx(file):
 
     gpx = gpxpy.parse(file)
 
-    all_points = []
-
-    # Collect all GPX points
-    for track in gpx.tracks:
-        for segment in track.segments:
-            for point in segment.points:
-                all_points.append(point)
+    all_points = [
+        point
+        for track in gpx.tracks
+        for segment in track.segments
+        for point in segment.points
+    ]
 
     if not all_points:
         return None
