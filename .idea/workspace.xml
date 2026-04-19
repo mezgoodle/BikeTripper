@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7326e3e2-1aa6-4d1a-a825-e88224f38b58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/apps/activities/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/activities/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/activities/selectors.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/activities/selectors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/activities/services/gpx_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/activities/services/gpx_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/activities/services/stats_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/activities/services/stats_calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/activities/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/activities/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mezgoodle"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mezgoodle/BikeTripper.git",
+    "accountId": "317ff1cb-0d09-46af-a329-daaeb870be51"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="3CZdnk71WQbTGzEU7kRBDEyRzkE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#1 on init-django",
+    "last_opened_file_path": "C:/Projects/BikeTripper"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7326e3e2-1aa6-4d1a-a825-e88224f38b58" name="Changes" comment="" />
+      <created>1776597195558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776597195558</updated>
+    </task>
+    <servers />
+  </component>
+</project>

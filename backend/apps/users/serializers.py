@@ -1,3 +1,4 @@
+from django.contrib.auth.password_validation import validate_password as check_password
 from rest_framework import serializers
 
 from .models import User
@@ -23,3 +24,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return create_user(**validated_data)
+
+    def validate_password(self, value):
+        check_password(value)
+        return value

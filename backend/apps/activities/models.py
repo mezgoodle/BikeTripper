@@ -30,7 +30,6 @@ class Activity(BaseModel):
         blank=True
     )
     polyline = models.TextField(
-        null=True,
         blank=True
     )
     started_at = models.DateTimeField()

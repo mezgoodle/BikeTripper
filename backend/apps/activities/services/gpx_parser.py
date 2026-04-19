@@ -16,8 +16,10 @@ def parse_gpx(file):
             elevation_gain
             polyline
     """
-
-    gpx = gpxpy.parse(file)
+    try:
+        gpx = gpxpy.parse(file)
+    except Exception as e:
+        raise ValueError("Invalid GPX file")
 
     all_points = [
         point
@@ -27,7 +29,7 @@ def parse_gpx(file):
     ]
 
     if not all_points:
-        return None
+        raise ValueError("GPX file contains no track points")
 
     # Calculate distance and elevation
     distance, elevation = calculate_stats(all_points)

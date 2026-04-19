@@ -12,3 +12,8 @@ class User(AbstractUser, BaseModel):
 
     def __str__(self):
         return self.email
+
+    def save(self, *args, **kwargs):
+        if sel.email:
+            self.email = self.email.casefold()
+        super().save(*args, **kwargs)

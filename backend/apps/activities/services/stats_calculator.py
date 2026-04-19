@@ -40,7 +40,7 @@ def calculate_stats(points):
 
             total_distance += distance
 
-            if point.elevation and prev_point.elevation:
+            if point.elevation is not None and prev_point.elevation is not None:
                 diff = point.elevation - prev_point.elevation
                 if diff > 0:
                     elevation_gain += diff

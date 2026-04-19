@@ -1,3 +1,4 @@
+from gpxpy.gpx import GPXException
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
@@ -44,7 +45,13 @@ def upload_gpx(self, request, pk=None):
             status=status.HTTP_400_BAD_REQUEST
         )
 
-    stats = parse_gpx(gpx_file)
+    try:
+        stats = parse_gpx(gpx_file)
+        if stats is None:
+            return Response({"error": "No GPX file provided"},
+                            status=status.HTTP_400_BAD_REQUEST)
+    except GPXException as exc:
+        return Response({"error": f"Invalid GPX file: {str(exc)}"}, status=status.HTTP_400_BAD_REQUEST)
 
     activity.gpx_file = gpx_file
     activity.distance_km = stats["distance_km"]
